@@ -29,7 +29,12 @@
         sitekey: '0x4AAAAAAAYqZQXFYZdc0wEr',
         callback: function(token) {
           document.getElementById('cf-turnstile-response').value = token;
-        }
+        },
+        'error-callback': function() {
+          // Manejo de errores
+        },
+        'refresh-expired': 'auto',
+        'refresh-timeout': 'auto'
       });
     });
   </script>
